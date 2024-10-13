@@ -1,0 +1,57 @@
+/* Droplet.css */
+
+.droplet-container {
+  position: relative;
+  width: 100px; /* Width of the droplet */
+  height: 100px; /* Height of the droplet */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px; /* Adjust as needed */
+}
+
+.droplet {
+  width: 30px; /* Width of the droplet */
+  height: 50px; /* Height of the droplet */
+  background-color: #4b9cd3; /* Droplet color */
+  border-radius: 50% 50% 0 0; /* Rounded top */
+  animation: fall 1s infinite ease-in-out; /* Animation for falling effect */
+  position: absolute;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px; /* Width of ripple */
+  height: 60px; /* Height of ripple */
+  background: rgba(75, 156, 211, 0.5); /* Ripple color */
+  animation: ripple 1.5s infinite ease-in-out; /* Animation for ripple effect */
+  opacity: 0; /* Start invisible */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px); /* Adjust to make the droplet fall */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0; /* Fade out ripple */
+  }
+}
