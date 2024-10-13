@@ -8,7 +8,7 @@ const CompanyList = () => {
 
   useEffect(() => {
     const fetchCompanies = async () => {
-      const response = await fetch("http://localhost:5000/api/companies");
+      const response = await fetch("https://codedaleclonebackend.vercel.app/api/companies");
       const data = await response.json();
       console.log(data);
       setCompanies(data);
