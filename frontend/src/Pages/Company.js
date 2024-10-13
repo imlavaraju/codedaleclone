@@ -11,7 +11,7 @@ const CompanyDetail = () => {
     const fetchQuestions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/questions/${companyName}`
+          `https://codedaleclonebackend.vercel.app/api/questions/${companyName}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
