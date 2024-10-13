@@ -10,7 +10,7 @@ const router = express.Router();
 const upload = multer({ dest: "uploads/" });
 
 // Route to upload questions
-router.post("/upload", upload.single("file"), uploadQuestions);
+//router.post("/upload", upload.single("file"), uploadQuestions);
 
 // Route to get all companies
 router.get("/companies", getAllCompanies);
