@@ -1,5 +1,5 @@
 const express = require("express");
-const multer = require("multer");
+//const multer = require("multer");
 const {
   uploadQuestions,
   getAllCompanies,
@@ -7,7 +7,7 @@ const {
 } = require("../controllers/questionController");
 
 const router = express.Router();
-const upload = multer({ dest: "uploads/" });
+//const upload = multer({ dest: "uploads/" });
 
 // Route to upload questions
 //router.post("/upload", upload.single("file"), uploadQuestions);
