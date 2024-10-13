@@ -3,7 +3,11 @@ const csv = require("csv-parser");
 const fs = require("fs");
 
 // Handle CSV upload and data saving
-const uploadQuestions = (req, res) => {
+const uploadQuestions =(req,res)=>{
+  res.json("hello")
+}
+
+/*const uploadQuestions = (req, res) => {
   const companyName = req.body.companyName;
   const img = req.body.img;
 
@@ -41,7 +45,7 @@ const uploadQuestions = (req, res) => {
         fs.unlinkSync(req.file.path); // Remove uploaded file
       }
     });
-};
+};*/
 
 // Get all companies
 const getAllCompanies = async (req, res) => {
